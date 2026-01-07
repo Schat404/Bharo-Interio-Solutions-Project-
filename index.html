@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhargo Interio Solutions</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <img src="assets/images/logo.webp" alt="Bhargo Interio Solutions" class="logo">
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="industries.html">Industries</a>
+                <a href="brands.html">Brands</a>
+                <a href="contact.html" class="btn-outline">Contact</a>
+            </nav>
+
+            <!-- ADDED: Hamburger menu (mobile only) -->
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>You Dream, We Deliver</h1>
+                <p>Complete Interior & Building Solutions Under One Roof</p>
+
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn-primary">Get a Quote</a>
+                    <a href="https://wa.me/917074681973" target="_blank" class="btn-secondary">
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/images/hero.webp" alt="Interior Solutions">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT SNAPSHOT ================= -->
+    <section class="about-snapshot">
+        <div class="container">
+            <h2>About Bhargo Interio Solutions</h2>
+            <p>
+                Bhargo Interio Solutions supplies premium home appliances, interior
+                furnishings, and construction materials through trusted brand partnerships.
+            </p>
+
+            <div class="usp-list">
+                <span>Authorized Brands</span>
+                <span>One-Stop Solutions</span>
+                <span>Timely Delivery</span>
+                <span>Builder-Friendly Approach</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SOLUTIONS PREVIEW (ADDED) ================= -->
+    <section class="solutions-preview">
+        <div class="container">
+            <h2>Our Solutions</h2>
+
+            <div class="solutions-grid">
+                <div class="solution-card">Modular Kitchens & Appliances</div>
+                <div class="solution-card">Sanitaryware & Tiles</div>
+                <div class="solution-card">Electricals & Switches</div>
+                <div class="solution-card">Paints & Wall Finishes</div>
+                <div class="solution-card">Fitness & Wellness Solutions</div>
+                <div class="solution-card">Customized Furniture</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Bhargo Interio Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ================= WHATSAPP FLOAT ================= -->
+    <a href="https://wa.me/917074681973" class="whatsapp-float" target="_blank">
+        WhatsApp
+    </a>
+
+    <!-- JS for hamburger (REQUIRED, no conflict) -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

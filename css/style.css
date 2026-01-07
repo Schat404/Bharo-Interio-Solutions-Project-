@@ -1,0 +1,334 @@
+:root {
+    --brand-accent: #f4a100;
+    --text-dark: #222;
+    --text-muted: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #222;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn-outline {
+    padding: 8px 14px;
+    border: 1px solid var(--brand-accent);
+    color: var(--brand-accent);
+    border-radius: 4px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    padding: 60px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* 🔴 FIX: prevent button overlap */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--brand-accent);
+    color: #fff;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-secondary {
+    border: 1px solid #000;
+    padding: 12px 22px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 4px;
+}
+
+/* 🔴 FIX: constrain tall hero image */
+.hero-image img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ================= ABOUT SNAPSHOT ================= */
+.about-snapshot {
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+
+.about-snapshot h2 {
+    margin-bottom: 15px;
+}
+
+.usp-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.usp-list span {
+    background: #fff;
+    padding: 10px 15px;
+    border: 1px solid var(--brand-accent);
+    color: #333;
+    border-radius: 4px;
+}
+
+/* ================= SOLUTIONS PREVIEW ================= */
+.solutions-preview {
+    padding: 60px 0;
+}
+
+.solutions-preview h2 {
+    margin-bottom: 25px;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.solution-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-left: 4px solid var(--brand-accent);
+    padding: 20px;
+    font-weight: 500;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* ================= VISUAL DEPTH & RHYTHM PASS ================= */
+
+/* Global vertical rhythm for all sections */
+section {
+    padding: 70px 0;
+}
+
+/* Reduce hero dominance on inner pages */
+.hero {
+    padding: 60px 0 50px;
+}
+
+/* Subtle section contrast to avoid blandness */
+.about-snapshot {
+    background: #f8f8f8;
+}
+
+/* Section heading visual anchor */
+section h2 {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Accent line before section headings */
+section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 24px;
+    background: var(--brand-accent);
+    border-radius: 2px;
+}
+
+/* Improve paragraph readability and density */
+section p {
+    color: #555;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+/* Space between consecutive paragraphs */
+section p + p {
+    margin-top: 16px;
+}
+
+/* Improve spacing around USP list */
+.usp-list {
+    margin-top: 25px;
+}
+
+/* Slightly soften footer dominance */
+.footer {
+    padding: 18px 0;
+}
+/* ================= ABOUT IMAGE ================= */
+
+.about-image {
+    margin: 40px 0;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+/* ================= MODERN USP CARDS ================= */
+
+.usp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.usp-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 28px 24px;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+}
+
+.usp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+}
+
+.usp-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.usp-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.usp-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
